@@ -6,11 +6,15 @@ async function GetNewQuote(){
         await delay(1500);
 
         let num = parseInt(String(Math.random() * 1000));
-        var temp = await fetch("https://type.fit/api/quotes");
-        var data = await temp.json();
-        document.getElementById('quote').innerHTML = data[num].text;
-        document.getElementById('author').innerHTML = data[num].author;
 
-        document.getElementById('loader').style.display = 'none';
-        document.getElementById('quote-box').style.display = 'block';
-}
+        var response = await fetch("https://type.fit/api/quotes");
+        var data = await response.json();
+
+        document.getElementById('quote').innerHTML = data[num].text.trim();
+        
+        const authorName = data[num].author.trim();
+        const author=document.getElementById('author');
+        
+        if(!authorName) author.innerHTML="Unknown"
+        else author.innerHTML = authorName;
+}       
