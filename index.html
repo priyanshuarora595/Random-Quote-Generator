@@ -17,18 +17,27 @@
             <div class="container py-5 h-100">
               <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-md-12 col-xl-5">
-          
-                  <div class="card text-white" style="background-color: #1f959b; border-radius: 15px;">
+
+                  <div class="middle" id="loader" style="display: none;">
+                    <div class="bar bar1"></div>
+                    <div class="bar bar2"></div>
+                    <div class="bar bar3"></div>
+                    <div class="bar bar4"></div>
+                    <div class="bar bar5"></div>
+                    <div class="bar bar6"></div>
+                    <div class="bar bar7"></div>
+                    <div class="bar bar8"></div>
+                  </div>
+
+                  <div class="card text-white" style="background-color: #1f959b; border-radius: 15px;" id="quote-box">
                     <div class="card-body p-5">
-          
                       <i class="fas fa-quote-left fa-2x mb-4"></i>
-          
                       <p class="lead" id="quote">Genius is one percent inspiration and ninety-nine percent perspiration.</p>
-          
                       <hr>
 
-                    <div class="justify-content-center">
-                    <p class="mb-0" id="author">Thomas Edison</p>
+                    <div class="d-flex justify-content-center">
+                      <p class="mb-0" id="author">Thomas Edison</p>
+
                     </div>
                     <br>
                       <button type="button" class="btn btn-primary" onclick="GetNewQuote()">New Quote</button>
