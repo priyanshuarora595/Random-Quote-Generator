@@ -1,7 +1,13 @@
 async function GetNewQuote(){
         let num = parseInt(String(Math.random() * 1000));
-        var temp = await fetch("https://type.fit/api/quotes");
-        var data = await temp.json();
-        document.getElementById('quote').innerHTML = data[num].text;
-        document.getElementById('author').innerHTML = data[num].author;
+        var response = await fetch("https://type.fit/api/quotes");
+        var data = await response.json();
+
+        document.getElementById('quote').innerHTML = data[num].text.trim();
+        
+        const authorName = data[num].author.trim();
+        const author=document.getElementById('author');
+        
+        if(!authorName) author.innerHTML="Unknown"
+        else author.innerHTML = authorName;
 }       
