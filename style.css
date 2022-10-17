@@ -1,3 +1,8 @@
+body{
+  background-image: url("background_quote.avif");
+  background-size: cover;
+  backdrop-filter: blur(3px);
+}
 
 .gradient-custom {
     /* fallback for old browsers */
