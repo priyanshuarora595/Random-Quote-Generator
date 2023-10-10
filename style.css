@@ -1,24 +1,24 @@
-body{
-  background-image: url("background_quote.avif");
+body {
+  /* background-image: url("background_quote.avif"); */
   background-size: cover;
-  backdrop-filter: blur(3px);
+  /* backdrop-filter: blur(3px); */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center
+  text-align: center;
 }
 
 .gradient-custom {
-    /* fallback for old browsers */
-    background: #1f959b;
-    
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(to right, #1f959b, #000000);
-    
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to right, #1f959b, #000000)
-    }
+  /* fallback for old browsers */
+  background: #1f959b;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, #1f959b, #000000);
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #1f959b, #000000);
+}
 
 /* LOADER */
 .glow {
@@ -29,66 +29,68 @@ body{
 }
 
 .middle {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+.bar {
+  width: 10px;
+  height: 70px;
+  background: #fff;
+  display: inline-block;
+  transform-origin: bottom center;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  /*   box-shadow:5px 10px 20px inset rgba(255,23,25.2); */
+  animation: loader 1.2s linear infinite;
+}
+.bar1 {
+  animation-delay: 0.1s;
+}
+.bar2 {
+  animation-delay: 0.2s;
+}
+.bar3 {
+  animation-delay: 0.3s;
+}
+.bar4 {
+  animation-delay: 0.4s;
+}
+.bar5 {
+  animation-delay: 0.5s;
+}
+.bar6 {
+  animation-delay: 0.6s;
+}
+.bar7 {
+  animation-delay: 0.7s;
+}
+.bar8 {
+  animation-delay: 0.8s;
+}
+
+@keyframes loader {
+  0% {
+    transform: scaleY(0.1);
   }
-  .bar {
-    width: 10px;
-    height: 70px;
-    background: #fff;
-    display: inline-block;
-    transform-origin: bottom center;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-    /*   box-shadow:5px 10px 20px inset rgba(255,23,25.2); */
-    animation: loader 1.2s linear infinite;
+  50% {
+    transform: scaleY(1);
+    background: #1f959b;
   }
-  .bar1 {
-    animation-delay: 0.1s;
+  100% {
+    transform: scaleY(0.1);
+    background: transparent;
   }
-  .bar2 {
-    animation-delay: 0.2s;
+}
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #2600e6,
+      0 0 40px #2600e6, 0 0 50px #2600e6, 0 0 60px #2600e6, 0 0 70px #2600e6;
   }
-  .bar3 {
-    animation-delay: 0.3s;
+
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #594dff, 0 0 40px #594dff,
+      0 0 50px #594dff, 0 0 60px #594dff, 0 0 70px #594dff, 0 0 80px #594dff;
   }
-  .bar4 {
-    animation-delay: 0.4s;
-  }
-  .bar5 {
-    animation-delay: 0.5s;
-  }
-  .bar6 {
-    animation-delay: 0.6s;
-  }
-  .bar7 {
-    animation-delay: 0.7s;
-  }
-  .bar8 {
-    animation-delay: 0.8s;
-  }
-  
-  @keyframes loader {
-    0% {
-      transform: scaleY(0.1);
-    }
-    50% {
-      transform: scaleY(1);
-      background: #1f959b;
-    }
-    100% {
-      transform: scaleY(0.1);
-      background: transparent;
-    }
-  }
-  @-webkit-keyframes glow {
-    from {
-      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #2600e6, 0 0 40px #2600e6, 0 0 50px #2600e6, 0 0 60px #2600e6, 0 0 70px #2600e6;
-    }
-    
-    to {
-      text-shadow: 0 0 20px #fff, 0 0 30px #594dff, 0 0 40px #594dff, 0 0 50px #594dff, 0 0 60px #594dff, 0 0 70px #594dff, 0 0 80px #594dff;
-    }
-  }
+}

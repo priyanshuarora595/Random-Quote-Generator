@@ -1,26 +1,34 @@
-const delay = ms => new Promise(res => setTimeout(res, ms));
-async function GetNewQuote(){
-        document.getElementById('quote-box').style.display = 'none';
-        document.getElementById('loader').style.display = 'block';
- 
-        await delay(1000);
+fetch("https://source.unsplash.com/random/1600x900/?nature")
+  .then((response) => {
+    document.body.style.backgroundImage = `url(${response.url})`;
+  })
+  .catch((error) => {
+    console.error("Error fetching the background image:", error);
+  });
 
-        var response = await fetch("https://type.fit/api/quotes");
-        var data = await response.json();
-        const len = Object.keys( data ).length;
-        let num = parseInt(Math.floor(Math.random() * (len)) + 1);
+const delay = (ms) => new Promise((res) => setTimeout(res, ms));
+async function GetNewQuote() {
+  document.getElementById("quote-box").style.display = "none";
+  document.getElementById("loader").style.display = "block";
 
-        document.getElementById('quote-box').style.display = 'block';
-        document.getElementById('loader').style.display = 'none';
+  await delay(1000);
 
-        document.getElementById('loader').style.display = 'none';
-        document.getElementById('quote-box').style.display = 'block';
+  var response = await fetch("https://type.fit/api/quotes");
+  var data = await response.json();
+  const len = Object.keys(data).length;
+  let num = parseInt(Math.floor(Math.random() * len) + 1);
 
-        document.getElementById('quote').innerHTML = data[num].text.trim();
-        
-        const authorName = data[num].author.trim();
-        const author=document.getElementById('author');
-        
-        if(!authorName) author.innerHTML="Unknown"
-        else author.innerHTML = authorName;
-}       
+  document.getElementById("quote-box").style.display = "block";
+  document.getElementById("loader").style.display = "none";
+
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("quote-box").style.display = "block";
+
+  document.getElementById("quote").innerHTML = data[num].text.trim();
+
+  const authorName = data[num].author.trim();
+  const author = document.getElementById("author");
+
+  if (!authorName) author.innerHTML = "Unknown";
+  else author.innerHTML = authorName;
+}
