@@ -1,53 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
     <title>Random Quote Generator</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="col-lg-8 m-5">
-        <section class="vh-10">
-            <h1 class="glow">Random Quote Generator</h1>
-            <div class="container py-5 h-100">
-              <div class="row d-flex justify-content-center align-items-center h-100">
-                <div class="col-md-12 col-xl-5">
+      <section class="vh-10">
+        <h1 class="glow">Random Quote Generator</h1>
+        <div class="container py-5 h-100">
+          <div
+            class="row d-flex justify-content-center align-items-center h-100"
+          >
+            <div class="quote-wrapper col-md-12 col-xl-5">
+              <div class="middle" id="loader" style="display: none">
+                <div class="bar bar1"></div>
+                <div class="bar bar2"></div>
+                <div class="bar bar3"></div>
+                <div class="bar bar4"></div>
+                <div class="bar bar5"></div>
+                <div class="bar bar6"></div>
+                <div class="bar bar7"></div>
+                <div class="bar bar8"></div>
+              </div>
 
-                  <div class="middle" id="loader" style="display: none;">
-                    <div class="bar bar1"></div>
-                    <div class="bar bar2"></div>
-                    <div class="bar bar3"></div>
-                    <div class="bar bar4"></div>
-                    <div class="bar bar5"></div>
-                    <div class="bar bar6"></div>
-                    <div class="bar bar7"></div>
-                    <div class="bar bar8"></div>
+              <div
+                class="card text-white"
+                style="background-color: #1f959b; border-radius: 15px"
+                id="quote-box"
+              >
+                <div class="card-body p-5">
+                  <i class="fas fa-quote-left fa-2x mb-4"></i>
+                  <p class="lead" id="quote">
+                    Genius is one percent inspiration and ninety-nine percent
+                    perspiration.
+                  </p>
+                  <hr />
+
+                  <div class="d-flex justify-content-center">
+                    <p class="mb-0" id="author">Thomas Edison</p>
                   </div>
-
-                  <div class="card text-white" style="background-color: #1f959b; border-radius: 15px;" id="quote-box">
-                    <div class="card-body p-5">
-                      <i class="fas fa-quote-left fa-2x mb-4"></i>
-                      <p class="lead" id="quote">Genius is one percent inspiration and ninety-nine percent perspiration.</p>
-                      <hr>
-
-                    <div class="d-flex justify-content-center">
-                      <p class="mb-0" id="author">Thomas Edison</p>
-
-                    </div>
-                    <br>
-                      <button type="button" class="btn btn-primary" onclick="GetNewQuote()">New Quote</button>
-          
-                    </div>
-                  </div>
-          
+                  <br />
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    onclick="GetNewQuote()"
+                  >
+                    New Quote
+                  </button>
                 </div>
               </div>
             </div>
-          </section>
+          </div>
+        </div>
+      </section>
     </div>
-</body>
+  </body>
 </html>
