@@ -2,6 +2,11 @@ body{
   background-image: url("background_quote.avif");
   background-size: cover;
   backdrop-filter: blur(3px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center
 }
 
 .gradient-custom {
@@ -16,6 +21,12 @@ body{
     }
 
 /* LOADER */
+.glow {
+  font-size: 50px;
+  color: #ffffff;
+  text-shadow: 1px 1px 5px blue;
+  animation: glow 1s ease-in-out infinite alternate;
+}
 
 .middle {
     top: 50%;
@@ -72,4 +83,12 @@ body{
       background: transparent;
     }
   }
-  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #2600e6, 0 0 40px #2600e6, 0 0 50px #2600e6, 0 0 60px #2600e6, 0 0 70px #2600e6;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #594dff, 0 0 40px #594dff, 0 0 50px #594dff, 0 0 60px #594dff, 0 0 70px #594dff, 0 0 80px #594dff;
+    }
+  }
